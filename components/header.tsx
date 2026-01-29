@@ -81,14 +81,9 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <>
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="/login">Log in</Link>
-              </Button>
-              <Button size="sm" asChild>
-                <Link href="/register">Get Started</Link>
-              </Button>
-            </>
+            <Button size="sm" asChild>
+              <Link href="/login">Get Started</Link>
+            </Button>
           )}
         </div>
 
@@ -143,18 +138,11 @@ export function Header() {
                   </Button>
                 </>
               ) : (
-                <div className="flex flex-col gap-2">
-                  <Button variant="outline" asChild>
-                    <Link href="/login" onClick={() => setOpen(false)}>
-                      Log in
-                    </Link>
-                  </Button>
-                  <Button asChild>
-                    <Link href="/register" onClick={() => setOpen(false)}>
-                      Get Started
-                    </Link>
-                  </Button>
-                </div>
+                <Button asChild>
+                  <Link href="/login" onClick={() => setOpen(false)}>
+                    Get Started
+                  </Link>
+                </Button>
               )}
             </nav>
           </SheetContent>
